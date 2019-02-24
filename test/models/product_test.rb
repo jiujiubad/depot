@@ -58,7 +58,6 @@ class ProductTest < ActiveSupport::TestCase
                           price: 1,
                           image_url: "app1.gif")
     assert product.invalid?
-    puts "我是：#{product.errors.messages}"
     assert_equal [I18n.translate('errors.messages.taken')],
                  product.errors[:title]
   end
